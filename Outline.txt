@@ -1,0 +1,88 @@
+The Story:
+
+The game starts out with the main character. He is living a good life
+with a wife and two kids at the age of 28.
+Everything was going well until he had received a letter from his mother.
+
+The letter had read:
+"Hey Xunerophore{character name}, your father is at the end of his ropes. I
+know you loved him a lot but he won't be able to make it. He was apparently
+attacked during his final fishing expedition. He told me he wants to see you
+before he passes away, so please if you can make it, come to {location}
+before he is gone"
+
+-Love Mom
+
+Xunerophore{character name} shocked, immediately packed his things and left for
+{location}, he left a note telling his family of why he was gone.
+
+18 hours later, Xunerophore{character name}arrived at {location} and got a ride
+straight to the hospital.
+Once he arrived he found his mom sitting next to his dad. His mom came up
+and hugged Xunerophore{character} and expressed how much he appreciated him
+coming. Xunerophores{character name} mom explained to him that his
+dad woke up that morning ecstatic, that he thought was finally
+ready to capture the final fish he needed.
+Xunerophores
+{character name}'s mom then said that his
+dad hadn't came back for a long time and when she went to the area where
+he was fishing, dad was laying on the beach and was bleeding and close to
+dying. Xunerophores mom left the room crying, he then decided to talk to his
+father.
+
+His father explained to him about the most dangerous but the most rarest Fish
+in the world. It was called the "Ethereal Ultimatums". This was the final fish
+he needed for his collection and he lost to it. Xunerophore decided that he
+would finish his dads collection and get that fish. A warning was given to
+Xunerophore, that this was going to be a grueling and dangerous journey, and
+to make sure to train before going to capture the Ethereal Ultimatum.
+
+
+The Game:
+
+You start off with a basic fishing rod and a stick as a weapon, you also have
+100hp and (worms if bait is added)(Could also add a wallet feature, each time
+you buy a new rod your wallet increases so you can buy better things).
+
+There are different lakes you can travel to and each lake has more dangerous
+but more rewarding fish.
+
+Each time you fish up a fish, you will enter battle with it. Better items will
+do more damage to the fish killing them quicker. Fights are a turn based
+system, you attack and then the fish attacks. You can also try to flee but wont
+guarantee you will leave. If you die, you will restart all way in the
+beginning.(Possibility of adding items to catch fish easier or take less
+damage, etc.)(Make an option to be able to skip dialogue)
+
+The goal is to capture the Ethereal Ultimatum which is the only fish that
+resides in the Ethereal lake. To capture it you will need the best weapon, and
+the best fishing rod, (Possible Bait too, Ethereal Bait).
+
+There is a shop where you can buy health items, better fishing rods, and
+better weapons, (possibly bait too if I decide to do that). At this shop
+you can also sell your Captured fish. The harder the fish would be to capture,
+the more money it is worth.
+
+*Lake names can change
+
+The Hooligan Lake:
+Easiest fish to capture
+lowest amount of selling money
+
+Where are we now Lake:
+-Normal difficulty, most likely need a new weapon to capture fish and they do
+more damage
+-Better rate for fish
+
+...More lakes will be added with growth in statistics
+
+Ethereal Lake (The End):
+Hardest fish to capture in the Game, you will need the best weapon and fishing
+rod to capture it.
+(I could also make it where if you don't have the best rod, you could fight a
+ghost of something, like the fish, and you would lose to it 100% of the time
+and there would be no way to run, so you lose and you reset all your progress
+for even trying to do something like that. OR you could use any rod and try to
+fight the ethereal fish and you would do a max of 1 damage each time you attack
+and make it so you can't flee.)
+Once captured the game will end.
