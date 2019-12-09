@@ -3,6 +3,9 @@
 # Date : 11/18/2019
 # Krutik Rana
 # Program description : Inventory in a seperate file
+from characters import Player
+
+player = Player(None, None)
 
 
 def inventory():
@@ -17,17 +20,7 @@ def inventory():
         user = user.lower()
         # Checks to see if the user typed weapon
         if user == 'weapon':
-            # Loop that lists out weapons and their stats
-            for k, v in weapons_inventory.items():
-                print(f"In your weapon stash you have a {k} that deals {v} Dam\
-age")
-        # Checks to see if user typed fishing rod
-        elif user == 'fishing rod':
-            # Loop that lists out fishing rods in inventory and their stats
-            for k in fishingrod_inventory:
-                print(f"\nIn your fishing rod stash you have a {k}:")
-                for v in fishingrod_inventory[k]:
-                    print(f"This fishing rod can capture {v}")
+            player.print_inventory()
         # Checks to see if user typed heal
         elif user == 'heal':
             # Loop that lists out health items in inventory
@@ -45,12 +38,6 @@ age")
 
 
 weapons_inventory = {'Stick': 1, 'Bat': 3, 'Spiked Bat': 5, 'Sword': 10}
-# Creates a dictionary with a list of uses for the fishing rods
-fishingrod_inventory = {'Basic rod': ['Salmon', 'GoldFish', 'Guppy'],
-                        'Better rod': ['Hammerhead Sharks', 'The Great White',
-                                       'Saw Sharks'],
-                        'Ethereal Rod': ['Ethereal Ultimatum']
-                        }
 # Creates a dictionary of items that can heal you
 healthitems_inventory = {'Sandwich': 20, 'Medkit': 50, 'Pills': '5',
                          'Grass': 10

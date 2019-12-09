@@ -7,6 +7,7 @@ from tabulate import tabulate
 from world import *
 import world
 from characters import Player
+import Hooligan as hg
 
 
 def location():
@@ -35,7 +36,18 @@ def location():
                 for x, object in enumerate(row):
                     if isinstance(object, Player):
                         if isinstance(world.world_map[y - 1][x], Hooligan):
-                            pass
+                            hg.hooligan_lake()
+                        elif isinstance(
+                                world.world_map[y - 1][x], Residential):
+                            hg.residential()
+                        elif isinstance(world.world_map[y - 1][x], Where):
+                            hg.where_are_we_now()
+                        elif isinstance(world.world_map[y - 1][x], Kytersize):
+                            hg.kytersize()
+                        elif isinstance(world.world_map[y - 1][x], Juliot):
+                            hg.juliot()
+                        elif isinstance(world.world_map[y - 1][x], Ethereal):
+                            hg.ethereal()
                         else:
                             world.world_map[y - 1][x] = object
                             world.world_map[y][x] = None
@@ -45,7 +57,18 @@ def location():
                 for x, object in enumerate(row):
                     if isinstance(object, Player):
                         if isinstance(world.world_map[y][x - 1], Hooligan):
-                            pass
+                            hg.hooligan_lake()
+                        elif isinstance(
+                                world.world_map[y][x - 1], Residential):
+                            hg.residential()
+                        elif isinstance(world.world_map[y][x - 1], Where):
+                            hg.where_are_we_now()
+                        elif isinstance(world.world_map[y][x - 1], Kytersize):
+                            hg.kytersize()
+                        elif isinstance(world.world_map[y][x - 1], Juliot):
+                            hg.juliot()
+                        elif isinstance(world.world_map[y][x - 1], Ethereal):
+                            hg.ethereal()
                         else:
                             world.world_map[y][x - 1] = object
                             world.world_map[y][x] = None
@@ -56,7 +79,18 @@ def location():
                     if isinstance(object, Player):
                         print(x)
                         if isinstance(world.world_map[y][x + 1], Hooligan):
-                            pass
+                            hg.hooligan_lake()
+                        elif isinstance(
+                                world.world_map[y][x + 1], Residential):
+                            hg.residential()
+                        elif isinstance(world.world_map[y][x + 1], Where):
+                            hg.where_are_we_now()
+                        elif isinstance(world.world_map[y][x + 1], Kytersize):
+                            hg.kytersize()
+                        elif isinstance(world.world_map[y][x + 1], Juliot):
+                            hg.juliot()
+                        elif isinstance(world.world_map[y][x + 1], Ethereal):
+                            hg.ethereal()
                         else:
                             world.world_map[y][x + 1] = object
                             world.world_map[y][x] = None
@@ -67,10 +101,22 @@ def location():
                 for x, object in enumerate(row):
                     if isinstance(object, Player):
                         if isinstance(world.world_map[y + 1][x], Hooligan):
-                            pass
+                            hg.hooligan_lake()
+                        elif isinstance(
+                                world.world_map[y + 1][x], Residential):
+                            hg.residential()
+                        elif isinstance(world.world_map[y + 1][x], Where):
+                            hg.where_are_we_now()
+                        elif isinstance(world.world_map[y + 1][x], Kytersize):
+                            hg.kytersize()
+                        elif isinstance(world.world_map[y + 1][x], Juliot):
+                            hg.juliot()
+                        elif isinstance(world.world_map[y + 1][x], Ethereal):
+                            hg.ethereal()
                         else:
                             world.world_map[y + 1][x] = object
                             world.world_map[y][x] = None
+                        return
             # Checks to see if user typed q
         elif user == 'q':
             # Quits this part of the menu
