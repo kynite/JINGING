@@ -1,4 +1,6 @@
 from characters import Player
+import enemy
+import characters
 
 
 class MapTile:
@@ -16,8 +18,12 @@ class MapTile:
 class Ethereal(MapTile):
     def __init__(self, x, y):
         self.name = "Ethereal"
+        self.enemy = enemy.Ethereal()
 
         super().__init__(x, y)
+
+    def attack_player(self):
+        pass
 
     def intro_text(self):
         return"""

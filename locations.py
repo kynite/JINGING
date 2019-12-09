@@ -116,7 +116,8 @@ def location():
                         else:
                             world.world_map[y + 1][x] = object
                             world.world_map[y][x] = None
-                        return
+                            location()
+                            return
             # Checks to see if user typed q
         elif user == 'q':
             # Quits this part of the menu

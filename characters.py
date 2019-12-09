@@ -9,11 +9,12 @@ import weapons as wp
 class Player:
     def __init__(self, x, y):
         self.inventory = [wp.Stick(), wp.Bat(), wp.SpikedBat(), wp.Sword(),
-                          'Gold(0)', 'Sandwich']
+                          'Gold(0)', wp.Sandwich(), wp.Bread(),
+                          wp.Sandwich()]
         self.x = x
         self.y = y
         self.playername = "X"
-        self.hp = 100
+        self.hp = 45
         self.victory = False
 
     def print_inventory(self):
@@ -58,9 +59,33 @@ class Player:
     def move_west(self):
         self.move(dx=-1, dy=0)
 
+    def heal(self):
+        consumables = [item for item in self.inventory
+                       if isinstance(item, wp.Consumable)]
+        if not consumables:
+            print("You don't have any items to heal you!")
+            return
 
-class ShopMan:
+        for i, item in enumerate(consumables, 1):
+            print("Choose an item to use to heal: ")
+            print("{}. {}".format(i, item))
 
+            valid = False
+            while not valid:
+                print("type the number associated with the item to use otherw\
+ise type q to not use")
+                choice = input("")
+                if choice == 'q':
+                    break
+                else:
+                    try:
+                        to_eat = consumables[int(choice) - 1]
+                        self.hp = min(100, self.hp + to_eat.healing_value)
+                        self.inventory.remove(to_eat)
+                        print("Current HP: {}".format(self.hp))
+                        valid = True
+                    except (ValueError, IndexError):
+                        print("Invalid choice, try again.")
 
 
 def all_characters():

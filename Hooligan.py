@@ -15,7 +15,6 @@ def residential():
 
 def hooligan_lake():
     while True:
-
         print('would you like to fish or leave')
         action = input('choose an action: ')
         if action == 'fish':
