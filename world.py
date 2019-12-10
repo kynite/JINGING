@@ -1,6 +1,6 @@
 from characters import Player
 import enemy
-import characters
+import weapons as wea
 
 
 class MapTile:
@@ -26,9 +26,7 @@ class Ethereal(MapTile):
         pass
 
     def intro_text(self):
-        return"""
-        this is the final area you cannot leave, either die or win
-        """
+        pass
 
 
 class Juliot(MapTile):
@@ -68,9 +66,7 @@ class Hooligan(MapTile):
         super().__init__(x, y)
 
     def intro_text(self):
-        return"""
-        this is the new place
-        """
+        pass
 
 
 class Residential(MapTile):
@@ -81,6 +77,15 @@ class Residential(MapTile):
 
     def intro_text(self):
         pass
+
+
+class Loot(MapTile):
+    def __init__(self, x, y):
+        self.name = '*'
+        self.lootinventory = [wea.Maggot(), wea.Bread(), wea.Sandwich()]
+        self.index = 0
+
+        super().__init__(x, y)
 
 
 world_map = [[None, None, Ethereal(2, 0), None, None],

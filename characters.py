@@ -8,17 +8,16 @@ import weapons as wp
 
 class Player:
     def __init__(self, x, y):
-        self.inventory = [wp.Stick(), wp.Bat(), wp.SpikedBat(), wp.Sword(),
-                          'Gold(0)', wp.Sandwich(), wp.Bread(),
-                          wp.Sandwich()]
+        self.inventory = [wp.Stick(), wp.Bread()]
         self.x = x
         self.y = y
         self.playername = "X"
         self.hp = 45
         self.victory = False
+        self.gold = 0
 
     def print_inventory(self):
-        print("Inventory:")
+        print("Backpack:")
         for item in self.inventory:
             print('* ' + str(item))
         best_weapon = self.most_powerful_weapon()
@@ -42,22 +41,6 @@ class Player:
 
     def __str__(self):
         return self.playername
-
-    def move(self, dx, dy):
-        self.x = self.x + dx
-        self.y = self.y + dy
-
-    def move_north(self):
-        self.move(dx=0, dy=-1)
-
-    def move_south(self):
-        self.move(dx=0, dy=1)
-
-    def move_east(self):
-        self.move(dx=1, dy=0)
-
-    def move_west(self):
-        self.move(dx=-1, dy=0)
 
     def heal(self):
         consumables = [item for item in self.inventory
@@ -89,7 +72,10 @@ ise type q to not use")
 
 
 def all_characters():
-    """Commands to list out characters and enemies of the game"""
+    """
+    Commands to list out characters and enemies of the game, and provide
+    information about them
+    """
     while True:
         # Creates a new line
         print('\n')
@@ -106,7 +92,7 @@ def all_characters():
             for k, v in characters.items():
                 # If name is Xunerophore then special print statement
                 if k == "Xunerophore":
-                    print(f"The main character is {k} with {v}HP")
+                    print(f"The main character is {k} with {v} Starting HP")
                 # If name is Shopkeeper then special print statement
                 elif k == "Shopkeeper":
                     print(f"The {k} is {v}")

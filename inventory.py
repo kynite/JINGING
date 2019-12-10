@@ -19,7 +19,7 @@ def inventory():
         # Making the user input all lower case to match if and elif statements
         user = user.lower()
         # Checks to see if the user typed weapon
-        if user == 'weapon':
+        if user == 'backpack':
             player.print_inventory()
         # Checks to see if user typed heal
         elif user == 'heal':
@@ -32,7 +32,3 @@ def inventory():
         else:
             # Tells user it is an invalid option
             print('Invalid option')
-
-
-weapons_inventory = {'Stick': 1, 'Bat': 3, 'Spiked Bat': 5, 'Sword': 10}
-# Creates a dictionary of items that can heal you

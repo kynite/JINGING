@@ -29,9 +29,6 @@ def location():
         user = user.lower()
         # Checks to see if user typed in movement command
         if user == 'north':
-            # characters.Player().move_north()
-            # # prints out Movement
-            # print('Travelling North!')
             for y, row in enumerate(world.world_map):
                 for x, object in enumerate(row):
                     if isinstance(object, Player):
@@ -126,12 +123,3 @@ def location():
         else:
             # Tells user it is an invalid option
             print('invalid option')
-
-
-# Creates a dictionary with a list of fishes available at each lake
-locations = {'Hooligan Lake': ['Salmon', 'GoldFish', 'Guppy'],
-             'Where are we now Lake': ['Hammerhead Sharks', 'The Great White',
-                                       'Saw Sharks'],
-             'Ethereal Lake': ['Ethereal Ultim\
-atum'], 'Residential Lake': ['Shopkeeper'],
-             }

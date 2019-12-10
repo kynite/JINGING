@@ -1,11 +1,10 @@
-from random import randint
-
-
 def residential():
+    """Place where you will be able to buy items"""
     while True:
-        print('what would you like to purchase? or leave')
+        print('Welcome, would you like to purchase? or leave')
         action = input('choose an action: ')
         if action == 'purchase':
+            print("doesn't work")
             pass
         elif action == 'leave':
             break
@@ -18,6 +17,7 @@ def hooligan_lake():
         print('would you like to fish or leave')
         action = input('choose an action: ')
         if action == 'fish':
+            print("doesn't work")
             pass
         elif action == 'leave':
             break
@@ -30,6 +30,7 @@ def where_are_we_now():
         print('would you like to fish or leave')
         action = input('choose an action: ')
         if action == 'fish':
+            print("doesn't work")
             pass
         elif action == 'leave':
             break
@@ -42,6 +43,7 @@ def kytersize():
         print('would you like to fish or leave')
         action = input('choose an action: ')
         if action == 'fish':
+            print("doesn't work")
             pass
         elif action == 'leave':
             break
@@ -54,6 +56,7 @@ def juliot():
         print('would you like to fish or leave')
         action = input('choose an action: ')
         if action == 'fish':
+            print("doesn't work")
             pass
         elif action == 'leave':
             break
@@ -66,6 +69,7 @@ def ethereal():
         print('would you like to fish or leave')
         action = input('choose an action: ')
         if action == 'fish':
+            print("doesn't work")
             pass
         elif action == 'leave':
             break

@@ -45,3 +45,9 @@ class Bread(Consumable):
     def __init__(self):
         self.name = 'Bread'
         self.healing_value = 5
+
+
+class Maggot(Consumable):
+    def __init__(self):
+        self.name = 'Maggot'
+        self.healing_value = 1
