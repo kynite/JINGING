@@ -1,8 +1,8 @@
 # CS 30
 # Period 4
-# Date : 11/18/2019
+# Date : 12/9/2019
 # Krutik Rana
-# Program description : Orginizing the game into functions
+# Program description : Main game file to run all code
 import inventory as inv
 import locations as loc
 import characters as ch

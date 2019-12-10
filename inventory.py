@@ -1,10 +1,11 @@
 # CS 30
 # Period 4
-# Date : 11/18/2019
+# Date : 12/9/2019
 # Krutik Rana
-# Program description : Inventory in a seperate file
+# Program description : Players inventory and command to heal player
 from characters import Player
 
+# Creates and instance of player to be used
 player = Player(None, None)
 
 
@@ -20,9 +21,11 @@ def inventory():
         user = user.lower()
         # Checks to see if the user typed weapon
         if user == 'backpack':
+            # Prints the current inventory of the player
             player.print_inventory()
         # Checks to see if user typed heal
         elif user == 'heal':
+            # Bring up the heal menu
             player.heal()
         # Checks to see if user typed q
         elif user == 'q':

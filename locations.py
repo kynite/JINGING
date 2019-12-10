@@ -1,8 +1,8 @@
 # CS 30
 # Period 4
-# Date : 11/18/2019
+# Date : 12/9/2019
 # Krutik Rana
-# Program description : Locations in a seperate file
+# Program description : Movement of Player on the map
 from tabulate import tabulate
 from world import *
 import world
@@ -29,9 +29,14 @@ def location():
         user = user.lower()
         # Checks to see if user typed in movement command
         if user == 'north':
+            # Finds Player in the world_map
             for y, row in enumerate(world.world_map):
                 for x, object in enumerate(row):
+                    # if the object is a player move north
                     if isinstance(object, Player):
+                        # Checks to see if Player object is going to move into
+                        # another object and runs something else, before
+                        # destroying/overiding the other object
                         if isinstance(world.world_map[y - 1][x], Hooligan):
                             hg.hooligan_lake()
                         elif isinstance(
@@ -46,13 +51,20 @@ def location():
                         elif isinstance(world.world_map[y - 1][x], Ethereal):
                             hg.ethereal()
                         else:
+                            # moves the player in north direction
                             world.world_map[y - 1][x] = object
+                            # replaces tile with no value
                             world.world_map[y][x] = None
         # Checks to see if user typed in movement command
         elif user == 'west':
+            # Finds Player in the world_map
             for y, row in enumerate(world.world_map):
                 for x, object in enumerate(row):
+                    # if the object is a player move west
                     if isinstance(object, Player):
+                        # Checks to see if Player object is going to move into
+                        # another object and runs something else, before
+                        # destroying/overiding the other object
                         if isinstance(world.world_map[y][x - 1], Hooligan):
                             hg.hooligan_lake()
                         elif isinstance(
@@ -67,14 +79,20 @@ def location():
                         elif isinstance(world.world_map[y][x - 1], Ethereal):
                             hg.ethereal()
                         else:
+                            # moves the player in west direction
                             world.world_map[y][x - 1] = object
+                            # replaces tile with no value
                             world.world_map[y][x] = None
         # Checks to see if user typed in movement command
         elif user == 'east':
+            # Finds Player in the world_map
             for y, row in enumerate(world.world_map):
                 for x, object in enumerate(row):
+                    # if the object is a player move east
                     if isinstance(object, Player):
-                        print(x)
+                        # Checks to see if Player object is going to move into
+                        # another object and runs something else, before
+                        # destroying/overiding the other object
                         if isinstance(world.world_map[y][x + 1], Hooligan):
                             hg.hooligan_lake()
                         elif isinstance(
@@ -89,14 +107,22 @@ def location():
                         elif isinstance(world.world_map[y][x + 1], Ethereal):
                             hg.ethereal()
                         else:
+                            # moves the player in east direction
                             world.world_map[y][x + 1] = object
+                            # replaces tile with no value
                             world.world_map[y][x] = None
+                        # Break needed otherwise x appears in 2 position of map
                         break
         # Checks to see if user typed in movement command
         elif user == 'south':
+            # Finds Player in the world_map
             for y, row in enumerate(world.world_map):
                 for x, object in enumerate(row):
+                    # if the object is a player move south
                     if isinstance(object, Player):
+                        # Checks to see if Player object is going to move into
+                        # another object and runs something else, before
+                        # destroying/overiding the other object
                         if isinstance(world.world_map[y + 1][x], Hooligan):
                             hg.hooligan_lake()
                         elif isinstance(
@@ -111,9 +137,13 @@ def location():
                         elif isinstance(world.world_map[y + 1][x], Ethereal):
                             hg.ethereal()
                         else:
+                            # moves the player in south direction
                             world.world_map[y + 1][x] = object
+                            # replaces tile with no value
                             world.world_map[y][x] = None
+                            # reloads the location call to continue the map
                             location()
+                            # returns the new y value/ player position
                             return
             # Checks to see if user typed q
         elif user == 'q':

@@ -18,3 +18,9 @@
 - Added two more locations to game
 - Created separate files for aspects of the game
 - Added an option to list out characters
+
+## Version 0.3 Alpha
+- Player Movement added
+- Player defined (inventory, health, best weapon, etc..)
+- Player can heal
+- Added interactive elements on map (not finished)

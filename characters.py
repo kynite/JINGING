@@ -1,54 +1,75 @@
 # CS 30
 # Period 4
-# Date : 11/18/2019
+# Date : 12/9/2019
 # Krutik Rana
-# Program description : Seperate file for Characters
+# Program description : The Player and extra info about characters
 import weapons as wp
 
 
 class Player:
+    """
+    Player class which contains player logic and is what the user controls.
+    Holds healing capability and best weapon
+    """
     def __init__(self, x, y):
-        self.inventory = [wp.Stick(), wp.Bread()]
-        self.x = x
-        self.y = y
-        self.playername = "X"
-        self.hp = 45
-        self.victory = False
-        self.gold = 0
+        self.inventory = [wp.Stick(), wp.Bread()]  # Player inventory
+        self.playername = "X"  # Player name
+        self.hp = 45  # Player health
+        self.victory = False  # Player victory
+        self.gold = 0  # Player gold
 
     def print_inventory(self):
+        """Prints the players inventory"""
         print("Backpack:")
+        # Loop for each item in the players inventory
         for item in self.inventory:
             print('* ' + str(item))
+        # Assigns the best weapon
         best_weapon = self.most_powerful_weapon()
+        # print statement telling the best weapon in inventory
         print("Your best weapon is your {}".format(best_weapon))
 
     def most_powerful_weapon(self):
+        """Determines the most damaging weapon in Players inventory"""
+        # sets inital damge to 0
         max_damage = 0
+        # sets the best weapon to nothing
         best_weapon = None
+        # Loop for each item in inventory
         for item in self.inventory:
+            # Code adapted from Make Your own Python Text Based Adventure
+            # tries to see if the item damage is greator than the current max
+            # damage and then replaces the best weapon in inventory
             try:
                 if item.damage > max_damage:
                     best_weapon = item
                     max_damage = item.damage
             except AttributeError:
                 pass
-
+        # sends the best weapon to function
         return best_weapon
 
     def is_alive(self):
+        """Checks if player is alive"""
         return self.hp > 0
 
     def __str__(self):
+        """Gets the name of the player and makes it a string"""
         return self.playername
 
     def heal(self):
+        """
+        Heals the player making the players HP go up, Code adapted from Make
+        Your own Python Text Based Adventure
+        """
+        # Creates a list of consumables from the players inventory
         consumables = [item for item in self.inventory
                        if isinstance(item, wp.Consumable)]
+        # If there are no consumables then tells player he has not healing item
         if not consumables:
             print("You don't have any items to heal you!")
             return
-
+        # Shows an item that can heal you
         for i, item in enumerate(consumables, 1):
             print("Choose an item to use to heal: ")
             print("{}. {}".format(i, item))
@@ -57,10 +78,16 @@ class Player:
             while not valid:
                 print("type the number associated with the item to use otherw\
 ise type q to not use")
+                # Gets user input of what item they want to use to heal
                 choice = input("")
+                # Checks to see if user typed in q
                 if choice == 'q':
+                    # Deny the heal of that particular item/cancel the heal
                     break
+                # Any other option
                 else:
+                    # Uses the item and heals the player and then removes the
+                    # item from the players inventory
                     try:
                         to_eat = consumables[int(choice) - 1]
                         self.hp = min(100, self.hp + to_eat.healing_value)
